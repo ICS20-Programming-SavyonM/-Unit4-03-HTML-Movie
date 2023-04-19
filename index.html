@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <!--metadata-->
+    <meta charset="utf-8">
+    <meta name="description" content="User Input, with JavaScript">
+    <meta name="keywords" content="immaculata, ics2o">
+    <meta name="author" content="Ms Raffin">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--for favicon on this page-->
+   <link rel="apple-touch-icon" sizes="180x180" href="./fav_index/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./fav_index/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./fav_index/favicon-16x16.png" />
+    <link rel="manifest" href="./fav_index/site.webmanifest" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    
+    <!--Style on this page-->
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <title>Museum Admission in JS</title>
+  </head>
+  <body>
+    <script src="./js/script.js"></script>
+	  <center>
+    <h1>Are you old enough to watch?</h1>
+		<table>
+			<tr align = "center">
+				<td valign="top" align="right">
+					<h3>Enter age:</h3>
+					<form action="javascript:displayRating()">	
+					
+            <!--allow for only integers and positive numbers-->
+						 <input type="number" step="1" min="0" id="age" placeholder="Enter your age"><br><br> 
+             <input type="submit" value="Display Rating">  
+
+					</form>
+				</td>
+				<td valign="top" align="center">
+          
+          <!--image on this page-->
+					<img src="./images/movies.jpeg" alt="movies" height = 70% width="50%">
+				</td>
+			</tr>
+		</table>
+      
+		<!-- Create a space where the user information will be displayed -->
+		<div id="display-results">
+			
+		</div>
+		  </center>
+  </body>
+</html>
