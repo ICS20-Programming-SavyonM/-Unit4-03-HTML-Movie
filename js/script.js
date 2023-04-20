@@ -11,7 +11,7 @@
  */
 function displayRating() {
   	// initialize variables
-	let rating = "Please make a selection above."
+	let rating = "Please enter your age."
 	
 	// get the age of the user
 	let age = parseInt(document.getElementById('age').value)	
@@ -22,12 +22,12 @@ function displayRating() {
 	else if (age >= 13) {
 		rating = "You can watch movies that are rated PG or PG-13 alone."
 	}
-	else if (age = 12) {
+	else if (age >= 9) {
 			 rating = "You can watch movies that are rated G alone."
 	}
 
- else if (age >=9) {
-		rating = "You have to pay regular price."
+ else if (age <=8) {
+		rating = "You are not old enough to go to the theatre."
 	}
   	// display the rating of movie that the user can watch 
   	document.getElementById('display-results').innerHTML = rating
