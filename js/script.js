@@ -26,9 +26,14 @@ function displayRating() {
 			 rating = "You can watch movies that are rated G alone."
 	}
 
- else if (age <=8) {
+ else if (age > 0) {
 		rating = "You are not old enough to go to the theatre."
 	}
+
+  else if (age <=0) {
+		rating = "Please enter a valid age."
+	}
+
   	// display the rating of movie that the user can watch 
   	document.getElementById('display-results').innerHTML = rating
 }
