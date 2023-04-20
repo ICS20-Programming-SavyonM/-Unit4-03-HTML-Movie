@@ -10,30 +10,35 @@
  * This function displays what type of movie someone can watch based off their age entered
  */
 function displayRating() {
-  	// initialize variables
-	let rating = "Please enter your age."
+  // initialize variables
+  let rating = "Please enter your age."
 	
-	// get the age of the user
-	let age = parseInt(document.getElementById('age').value)	
+  // get the age of the user
+  let age = parseInt(document.getElementById('age').value)	
 
-  	if (age >=17) {
-	  rating = "You can watch movies that are rated R alone."
-	}
-	else if (age >= 13) {
-		rating = "You can watch movies that are rated PG or PG-13 alone."
-	}
-	else if (age >= 9) {
-			 rating = "You can watch movies that are rated G alone."
-	}
+  // check the age of the user and set the rating accordingly
+  if (age >= 17) {
+    rating = "You can watch movies that are rated R alone."
+  }
+  else if (age >= 13) {
+    rating = "You can watch movies that are rated PG-13 alone."
+  }
+  else if (age >= 9) {
+    rating = "You can watch movies that are rated G or PG alone."
+  }
+  else if (age > 0) {
+    rating = "You are not old enough to go to the theatre alone."
+  }
+  else if (age <= 0) {
+    rating = "Please enter a valid age."
+  }
 
- else if (age > 0) {
-		rating = "You are not old enough to go to the theatre."
-	}
+else if (age < 0) {
+    rating = "Please enter a valid age."
+  }
 
-  else if (age <=0) {
-		rating = "Please enter a valid age."
-	}
+  
 
-  	// display the rating of movie that the user can watch 
-  	document.getElementById('display-results').innerHTML = rating
+  // display the rating of movie that the user can watch 
+  document.getElementById('display-results').innerHTML = rating
 }
